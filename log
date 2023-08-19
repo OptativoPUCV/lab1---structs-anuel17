@@ -15,3 +15,9 @@ Sat 19 Aug 2023 01:19:14 AM UTC:
  tests:  0|5
 total_score: 20/70
 a624b73
+Sat 19 Aug 2023 01:25:27 AM UTC: 
+ exercises.c | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+ tests:  0|4
+total_score: 30/70
+ea7c4f2
