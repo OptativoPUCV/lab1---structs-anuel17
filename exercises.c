@@ -71,7 +71,8 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) {
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) 
+{
     int i = 0, j = 0, k = 0;
 
     while (i < size1 && j < size2) {
@@ -118,12 +119,6 @@ int checkSorted(int arr[], int size)
     return 0;
   }
 }
-
-
-
-
-
-
 /*
 Ejercicio 6: Información de una Biblioteca
 Descripción: Vamos a representar la información de una biblioteca. En la
@@ -144,7 +139,18 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion) 
+{
+    strncpy(libro->titulo, titulo, sizeof(libro->titulo) - 1);
+    libro->titulo[sizeof(libro->titulo) - 1] = '\0';
+
+    strncpy(libro->autor.nombre, nombreAutor, sizeof(libro->autor.nombre) - 1);
+    libro->autor.nombre[sizeof(libro->autor.nombre) - 1] = '\0';
+
+    libro->autor.anioNacimiento = anioNacimiento;
+    libro->anioPublicacion = anioPublicacion;
+}
+
 
 /*
 Ejercicio 7: Lista enlazada de números
